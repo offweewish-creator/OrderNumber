@@ -1,4 +1,4 @@
-const WORKER_URL = "https://trello-order-worker.off-weewish.workers.dev";
+const WORKER_URL = "https://ordernumber.off-weewish.workers.dev";
 
 window.TrelloPowerUp.initialize({
   "card-buttons": function (t) {
