@@ -4,7 +4,7 @@ window.TrelloPowerUp.initialize({
   "card-buttons": function (t) {
     return [
       {
-        text: "🔢 Generate Order",
+        text: "Generate Order",
 
         callback: async function (t) {
 
