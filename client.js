@@ -23,26 +23,25 @@ window.TrelloPowerUp.initialize({
 
           const data = await res.json();
 
-          if (!data.success) {
+         if (!data.success) {
 
-            if (data.orderNo) {
-              return t.alert({
-                message:
-                  `มีเลขออเดอร์แล้ว (${data.orderNo})`
-              });
-            }
+  if (data.orderNo) {
+    return t.alert({
+      message:
+        `Order already exists (${data.orderNo})`
+    });
+  }
 
-            return t.alert({
-              message:
-                data.message || "ไม่สามารถสร้างเลขออเดอร์ได้"
-            });
-          }
+  return t.alert({
+    message:
+      data.message || "Unable to generate order"
+    });
+}
 
-          return t.alert({
-            message:
-              `สร้าง ${data.orderNo} สำเร็จ และเพิ่มข้อความแจ้งลูกค้าแล้ว`
-          });
-
+return t.alert({
+  message:
+    `Order ${data.orderNo} created successfully`
+});
         }
       }
     ];
